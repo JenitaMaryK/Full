@@ -1,0 +1,144 @@
+<style type="text/css" media="all">
+
+@font-face {
+
+font-family: 'Wundercon-Pictograms';
+src: url('//static.wunderlist.com/f20b434d7c02cbea5fdb73e0e92868546c976b3b/fonts/Wundercon-Pictograms.eot');
+src: local('☺'),
+url('//static.wunderlist.com/30946e32c9fd50fb9f6605f8128c492bc7db75f2/fonts/Wundercon-Pictograms.woff') format('woff'),
+url('//static.wunderlist.com/a74caeab0d59cf9b3c94b633219eb2e3ff7b4484/fonts/Wundercon-Pictograms.ttf') format('truetype'),
+url('//static.wunderlist.com/ec47c441ecccf832fbc749e8667b803115609093/fonts/Wundercon-Pictograms.svg') format('svg'),
+url('//static.wunderlist.com/f20b434d7c02cbea5fdb73e0e92868546c976b3b/fonts/Wundercon-Pictograms.eot?#iefix') format('embedded-opentype');
+font-weight: normal;
+font-style: normal;
+}
+
+</style>
+<!--[if lt IE 10]>
+<script type="text/javascript">
+this.kaputBrowser=true;
+document.createElement("text");
+</script>
+<![endif]-->
+<script type="text/javascript">this.gitHash = '3.19.8 [54b1fe063d464955ef85f37d09edf67bbbfb8ac9] Thu Apr 27 2017 @ 13:48:23 GMT+0200 (CEST)';</script>
+<script type="text/javascript">
+
+if (window.kaputBrowser) {
+window.location = '/unsupported';
+}
+
+// taken from the website loginAppView
+function appendScript (url, callback) {
+
+var script = document.createElement('script');
+script.type = "text/javascript";
+
+var link = document.createElement('a');
+link.href = url;
+if (link.host !== location.host) {
+script.crossOrigin = 'anonymous';
+}
+
+if (script.readyState) { //IE
+script.onreadystatechange = function () {
+var state = script.readyState;
+if (state == "loaded" || state == "complete"){
+script.onreadystatechange = null;
+callback && callback();
+}
+};
+} else {
+script.onload = function () {
+callback && callback();
+};
+}
+
+script.src = url;
+document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+var href = window.location.href;
+var hash = window.location.hash.replace('#/', '');
+var application;
+
+var routes = {
+"welcome": "login",
+"login": "login",
+"logout": "login",
+"signup": "login",
+"forgot-password": "login",
+"forgot/password": "login",
+"connect": "login",
+"start": "main",
+"setup": "main",
+"shared": "main"
+};
+var apps = {
+"libs.js": "368b8516cb226b7b910013bc420a199e84b73d38/libs.js",
+"apps/login.js": "e6ad2daa13effecae4b5b2408b6b6adff59010e4/apps/login.js",
+"apps/main.js": "53b61e11e76c4470ae5c55c65ce2c0c28f34e918/apps/main.js"
+};
+var baseUrl = '//static.wunderlist.com/';
+var configPath = '/config.js?bust=' + (new Date()).valueOf();
+
+var name;
+// if the route matches one in the map above, load the sandboxed app
+for (var route in routes) {
+name = routes[route];
+if (hash.indexOf(route) === 0) {
+application = name;
+}
+}
+
+// if still no app, load main
+if (!application || application === 'login') {
+application = 'main';
+}
+
+function isMobile () {
+
+var agent = window.navigator.userAgent;
+var platforms = [
+'Android', 'webOS', 'iPhone', 'iPad',
+'iPod', 'Blackberry', 'Windows Phone'
+];
+var expression = new RegExp(platforms.join('|'), 'i');
+
+return agent.match(expression);
+}
+
+// start up which ever application
+function start (application) {
+
+appendScript(configPath, function () {
+
+requirejs([
+'vendor/jquery',
+'vendor/ua-detector'
+], function ($, UA) {
+
+// If a browser we do not support the app in:
+// Latest FF ESR is 17, anything below 16 we do not support.
+var browser = UA.browser.toLowerCase();
+var badFirefox = browser === 'firefox' && UA.version < 16;
+var badChrome = browser === 'chrome' && UA.version < 27;
+var badSafari = browser === 'safari' && UA.version <= 6;
+if (isMobile() || window.kaputBrowser || badFirefox || badChrome || badSafari || !('localStorage' in window)) {
+window.location = '/unsupported?path=' + hash;
+} else {
+$(function() {
+appendScript(baseUrl + apps['apps/' + application + '.js'])
+});
+}
+});
+});
+}
+
+appendScript(baseUrl + apps['libs.js'], function () {
+start(application);
+});
+</script>
+
+</head>
+<body class="wlapp-parent" style="opacity:0;"></body>
+</html>

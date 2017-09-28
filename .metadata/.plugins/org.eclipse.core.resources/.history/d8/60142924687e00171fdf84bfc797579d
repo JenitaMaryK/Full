@@ -1,0 +1,88 @@
+package Watches;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Remove extends Inventory {
+	public static void remove()
+	{
+		int siz = hm.size();
+		if (siz == 0) {
+			System.out.println("There is no item to view in the inventory");
+			add();
+			display();
+		}
+		
+		System.out.println("Select item to place order");
+		//Inventory in=new Inventory();
+		//in.categories();
+		display();
+		System.out.println("Brand:");
+		Scanner sc = new Scanner(System.in);
+		String Brand = sc.nextLine();
+		System.out.println("No of items");
+		Scanner s1=new Scanner(System.in);
+		int noItem=s1.nextInt();
+		if(noItem<5)
+		{
+		for (HashMap.Entry<Integer, New> entry : hm.entrySet()) {
+			int key = entry.getKey();
+			New b = entry.getValue();
+			if(b.brand.equalsIgnoreCase(Brand) && (noItem<=b.quantity))
+				b.quantity=b.quantity-noItem;
+			else if(noItem>b.quantity)
+				System.out.println("No sufficient Items");
+			else 
+				System.out.println("Enter correct brand name");
+			
+		}
+		for (HashMap.Entry<Integer, New> entry : hm.entrySet()) {
+			int key = entry.getKey();
+			New b = entry.getValue();
+			if(b.quantity==0)
+				hm.remove(b);
+		}
+			System.out.println(key + "\t\t" + b.brand + "\t\t" + b.price + "\t\t" + b.quantity);
+		//}
+		}
+		else
+		{
+			System.out.println("Please enter a number less than 5");
+		}
+		//menu();
+		/*
+		switch(x1)
+		{
+		case 1:
+			System.out.println("Enter the id of the item which u want to remove:");
+			Scanner s=new Scanner(System.in);
+			int x=s.nextInt();
+			if(hm.containsKey(x))
+			{
+				hm.remove(x);
+			}
+			
+		case 2:
+			System.out.println("Enter the id of the item which u want to remove:");
+			Scanner ss=new Scanner(System.in);
+			int y=ss.nextInt();
+			if(hm.containsKey(y))
+			{
+				hm.remove(y);
+			}
+			
+		case 3:
+			System.out.println("Enter the id of the item which u want to remove:");
+			Scanner sa=new Scanner(System.in);
+			int z=sa.nextInt();
+			if(hm.containsKey(z))
+			{
+				hm.remove(z);
+			}
+			
+		}
+		*/
+		
+	}
+
+}

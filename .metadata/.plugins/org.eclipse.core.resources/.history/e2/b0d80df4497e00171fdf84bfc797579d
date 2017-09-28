@@ -1,0 +1,14 @@
+package Watches;
+
+public class MainClass {
+	public static void main(String[] args) {
+
+		
+		//Whole obj = new Whole();
+		//obj.option1();
+		Add a=new Add();
+		a.add();
+		a.display();
+
+	}
+}

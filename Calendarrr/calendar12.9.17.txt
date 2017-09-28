@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container" style="float:left">
+  <div class="w3-card-4" style="width:100%;">
+    <header class="w3-container w3-blue">
+      <h1>CALENDAR</h1>
+    </header>
+    <footer class="w3-container w3-grey" >
+    <input type="date" name="date">  
+    </footer>
+  </div>
+  
+</div>
+
+<div class="w3-container" style="float:right ">
+  
+    
+    <input type="submit" value="LOGOUT">  
+    
+  </div>
+  
+</div>
+
+</body>
+</html>

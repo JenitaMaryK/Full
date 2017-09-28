@@ -1,0 +1,17 @@
+<html>
+<head>
+</head>
+<body>
+<script language="JavaScript"><!--
+function popup (name,width,height) {
+     var options = "toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=0,width="+width+",height="+height;
+     Cal2=window.open(name,"popup",options);
+}
+//-->
+</script>
+</head>
+<body>
+<center><h1>A Pop-up Calendar</h1></center>
+<p>This is a very nice calendar that shows all dates
+ between 1900 and 2100.</p>
+<p><a href="JavaScript:popup('calendar3.htm',350,270)">View the calendar</a></p>

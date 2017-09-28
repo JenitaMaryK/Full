@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="Watches.Whole"/>
+<fullyQualifiedTypeName name="com.myjava.string.Test1"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletException"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletConfig"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="com.google.appengine.api.datastore.DatastoreService"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+<fullyQualifiedTypeName name="com.google.appengine.api.datastore.Entity"/>
+<fullyQualifiedTypeName name="com.google.appengine.api.datastore.Query.FilterOperator"/>
+<fullyQualifiedTypeName name="com.google.appengine.api.datastore.PreparedQuery"/>
+<fullyQualifiedTypeName name="login.Validate"/>
+<fullyQualifiedTypeName name="com.google.appengine.api.datastore.DatastoreServiceFactory"/>
+<fullyQualifiedTypeName name="com.google.apphosting.client.datastoreservice.proto.DatastoreService"/>
+<fullyQualifiedTypeName name="com.google.appengine.api.datastore.Query"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.bind.v2.schemagen.xmlschema.List"/>
+<fullyQualifiedTypeName name="login.Data"/>
+<fullyQualifiedTypeName name="java.lang.StackTraceElement"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.google.appengine.api.datastore.KeyFactory"/>
+<fullyQualifiedTypeName name="login.Registration"/>
+</qualifiedTypeNameHistroy>

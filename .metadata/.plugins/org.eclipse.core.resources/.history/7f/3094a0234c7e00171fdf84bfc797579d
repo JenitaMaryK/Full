@@ -1,0 +1,55 @@
+package Watches;
+
+import java.util.HashMap;
+
+public class GetInput extends Add {
+	HashMap<Integer, New> hm = new HashMap<Integer, New>();
+
+	public void AnalogWatches() {
+
+		New w = new New("Sonata ", 4999, 1);
+		New w1 = new New("Timex  ", 1500, 1);
+		New w2 = new New("Titan  ", 25000, 1);
+		New w3 = new New("Rolex  ", 10000, 1);
+		New w5 = new New("Casio  ", 10000, 1);
+		hm.put(1, w);
+		hm.put(2, w1);
+		hm.put(3, w2);
+		hm.put(4, w3);
+		hm.put(5, w5);
+		display();
+
+	}
+
+	public void DigitalWatches() {
+
+		New w = new New("Fstrack", 10000, 1);
+		New w2 = new New("Titan", 5000, 1);
+		New w3 = new New("Rolex", 20000, 1);
+		New w4 = new New("Citizen", 5000, 1);
+		New w5 = new New("Casio", 10000, 1);
+		hm.put(101, w);
+		hm.put(102, w2);
+		hm.put(103, w3);
+		hm.put(104, w4);
+		hm.put(105, w5);
+		display();
+	}
+
+	public void SmartWatches() {
+
+		New w = new New("Apple", 20000, 1);
+		New w2 = new New("Samsng", 25000,1);
+		New w3 = new New("Lenovo", 2000, 1);
+		New w4 = new New("Fstrck", 5000, 1);
+		New w5 = new New("Casio", 19000, 1);
+		hm.put(201, w);
+		hm.put(202, w2);
+		hm.put(203, w3);
+		hm.put(204, w4);
+		hm.put(205, w5);
+		display();
+
+	}
+
+}

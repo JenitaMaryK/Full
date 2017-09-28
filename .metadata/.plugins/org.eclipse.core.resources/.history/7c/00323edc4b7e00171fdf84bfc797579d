@@ -1,0 +1,71 @@
+package Watches;
+
+import java.util.Scanner;
+
+public class Inventory extends Add  {
+	public void categories() {
+		/*
+		GetInput w = new GetInput();
+		System.out.println("1. Digital Watches");
+		System.out.println("2. Analog Watches");
+		System.out.println("3. Smart Watches");
+		System.out.println("Choose the options:");
+		Scanner sn = new Scanner(System.in);
+		int x1 = sn.nextInt();
+		switch (x1) {
+		case 1:
+			w.DigitalWatches();
+			break;
+		case 2:
+			w.AnalogWatches();
+			break;
+		case 3:
+			w.SmartWatches();
+			break;
+		default:
+			System.out.println("Enter valid options");
+			break;
+
+		}*/
+		int siz = hm.size();
+		if(siz==0)
+		{
+			System.out.println("There is no item to view in the inventory\nPlease add new items");
+			add();
+			display();
+		}
+		/*
+
+		System.out.println("Do you want to view Another set of watches(yes/no)");
+		Scanner s = new Scanner(System.in);
+		String x = s.nextLine();
+		if (x.equalsIgnoreCase("yes"))
+		{
+			Inventory obj = new Inventory();
+			obj.categories();
+		} 
+		else
+		{*/else{
+			System.out.println("Do you want to go to main menu(yes/no)");
+			Scanner ss = new Scanner(System.in);
+			String x2 = ss.nextLine();
+
+			if (x2.equalsIgnoreCase("yes"))
+			{
+				Whole obj=new Whole();
+				obj.option1();
+			}
+			else if(x2.equalsIgnoreCase("no"))
+			{
+				System.exit(0);
+			}
+			else
+			{
+				System.out.println("Enter valid input");
+			}
+		}
+		
+
+	}
+
+}

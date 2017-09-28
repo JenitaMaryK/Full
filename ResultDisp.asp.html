@@ -1,0 +1,343 @@
+
+<!-- saved from url=(0044)http://result.pondiuni.edu.in/ResultDisp.asp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft Visual Studio 6.0">
+<style>
+.jc{
+position:relative;
+}
+</style>
+
+<script language="JavaScript1.2">
+
+//Trembling message script- © Dynamic Drive (www.dynamicdrive.com)
+//For full source code, 100's more DHTML scripts, and TOS,
+//visit http://www.dynamicdrive.com
+
+var ns6=document.getElementById&&!document.all
+var ie=document.all
+
+var customcollect=new Array()
+var i=0
+
+function jiggleit(num){
+if ((!document.all&&!document.getElementById)) return;
+customcollect[num].style.left=(parseInt(customcollect[num].style.left)==-1)? customcollect[num].style.left=1 : customcollect[num].style.left=-1
+}
+
+function init(){
+if (ie){
+while (eval("document.all.jiggle"+i)!=null){
+customcollect[i]= eval("document.all.jiggle"+i)
+i++
+} 
+}
+else if (ns6){
+while (document.getElementById("jiggle"+i)!=null){
+customcollect[i]= document.getElementById("jiggle"+i)
+i++
+}
+}
+
+if (customcollect.length==1)
+setInterval("jiggleit(0)",80)
+else if (customcollect.length>1)
+for (y=0;y<customcollect.length;y++){
+var tempvariable='setInterval("jiggleit('+y+')",'+'100)'
+eval(tempvariable)
+}
+}
+
+window.onload=init
+
+</script>
+</head>
+<body bgcolor="#f0e68c">
+
+
+<script language="javascript">
+function SubjectDetails()
+{
+	var popurl="SubjectDetails.asp"
+	document.ResultDisp.action = "ElementDisplay.asp"
+	document.ResultDisp.sqlquery.value = "SELECT [STUDENT].[FREGNO], [STUDENT].[FDEGREE], [STUDENT].[FNAME], [STUDENT].[FSCHEME], [STUDENT].[FYEAR], [STUDENT].[FEXAMTYPE], [MARKS].[FSUBCODE], [MARKS].[FTHUE], [MARKS].[FTHVV], [MARKS].[FTHIA], [MARKS].[FTHTOT], [MARKS].[FPRUE], [MARKS].[FPRVV], [MARKS].[FPRIA], [MARKS].[FPRTOT], [MARKS].[FTHPASSMTH], [MARKS].[FTHPASSMTH], [MARKS].[FPRPASSMTH], [MARKS].[FMAXMARKS], [MARKS].[FTOTMARKS], [MARKS].[FPERCENT], [MARKS].[FCLASS], [MARKS].[FMCNUMBER], [MARKS].[FEXAMTYPE], [MARKS].[FPREVMAX], [MARKS].[FPREVTOT], [DEGREE].[FSCHEME], [DEGREE].[FDESCPN], [DEGREE].[FEXAMNAME],[student].[FEXAMno], [DEGREE].[FEXAMDATE], [DEGREE].[FEXAMTYPE], [DEGREE].[FELIGREM01], [DEGREE].[FELIGREM02], [SUBJECT].[FSCHEME], [SUBJECT].[FMARKDESC1], [SUBJECT].[FMARKDESC2], [SUBJECT].[FEXAMTYPE], [COLLEGE].[FSCHEME], [COLLEGE].[FCOLLCODE], [COLLEGE].[FCOLLNAME], [COLLEGE].[FTOWN], [COLLEGE].[FEXAMTYPE], [STUDENT].[FENROLL] FROM (MARKS INNER JOIN ((STUDENT INNER JOIN COLLEGE ON [STUDENT].[FCOLLCODE]=[COLLEGE].[FCOLLCODE]) INNER JOIN DEGREE ON ([STUDENT].[FSCHEME]=[DEGREE].[FSCHEME]) AND ([STUDENT].[FDEGREE]=[DEGREE].[FDEGREE])) ON ([MARKS].[FSCHEME]=[STUDENT].[FSCHEME]) AND ([MARKS].[FDEGREE]=[STUDENT].[FDEGREE]) AND ([MARKS].[FREGNO]=[STUDENT].[FREGNO])) INNER JOIN SUBJECT ON ([MARKS].[FSUBCODE]=[SUBJECT].[FSUBCODE]) AND ([MARKS].[FEXAMNO]=[SUBJECT].[FEXAMNO]) AND ([MARKS].[FSCHEME]=[SUBJECT].[FSCHEME]) AND ([MARKS].[FDEGREE]=[SUBJECT].[FDEGREE])WHERE ((([STUDENT].[FREGNO])='13td2418' OR ([STUDENT].[fenroll])='13td2418') And (([STUDENT].[FDEGREE])='BTHCS') And (([SUBJECT].[FSCHEME])=[MARKS].[FSCHEME]) And (([SUBJECT].[FSUBCODE])=[MARKS].[FSUBCODE]) And (([COLLEGE].[FSCHEME])=[STUDENT].[FSCHEME]) And (([COLLEGE].[FCOLLCODE])=[STUDENT].[FCOLLCODE]) and (([COLLEGE].[FDEGREE])=[STUDENT].[FDEGREE]) and (([COLLEGE].[FSCHEME])=[STUDENT].[FSCHEME]) and (([COLLEGE].[FEXAMNO])=[STUDENT].[FEXAMNO])And (([MARKS].[FDEGREE])=[STUDENT].[FDEGREE]) And (([MARKS].[FEXAMNO])=[STUDENT].[FEXAMNO]) And (([MARKS].[FREGNO])=[STUDENT].[FREGNO]) And (([MARKS].[FSCHEME])=[STUDENT].[FSCHEME]) And (([MARKS].[FEXAMNO])='H') And (([DEGREE].[FDEGREE])=[MARKS].[FDEGREE]) And (([DEGREE].[FEXAMNO])='H') And (([SUBJECT].[FDEGREE])=[MARKS].[FDEGREE]) And (([SUBJECT].[FEXAMNO])='H') And (([COLLEGE].[FDEGREE])=[STUDENT].[FDEGREE])) order by subject.fsubcode"
+	document.ResultDisp.method = "post"
+	//window.open("SubjectDetails.asp","","width=600,height=500,")
+	document.ResultDisp.submit();
+	//window.document.open("subjectdetails.asp","","fullscreen,scrollbars")
+	//window.open(popurl,"","width=600,height=500,")
+	//newwin=window.open("","","scrollbars")
+	//newwin.moveTo(0,0)
+	//newwin.resizeTo(screen.width,screen.height)
+}
+</script>
+
+<form name="ResultDisp">
+
+
+	<p class="MsoNormal" align="center" style="TEXT-ALIGN: center"><strong><font size="7"><st1:place><font face="Fixedsys"><st1:placename><span style="FONT-SIZE: 18pt; COLOR: blue; FONT-FAMILY: Book Antiqua">PONDICHERRY UNIVERSITY</span></st1:placename><span <="" strong=""></span></font></st1:place></font></strong></p><strong><font size="7"><font face="Fixedsys">
+
+	
+<table width="70%" align="center" border="0" cellspacing="1" cellpadding="1">
+  <tbody><tr>	
+		<td align="center"><font face="arial" size="3" color="black"><b>Eighth Semester B.Tech(Computer Science &amp; Engineering) May 2017 Examinations</b></font></td>
+  </tr>
+</tbody></table>
+<table align="center" border="0" cellspacing="1" cellpadding="2" bordercolor="LightCyan" bordercolordark="LightCyan">
+	<tbody><tr>
+		<td align="center"><font face="arial" size="3" color="blue"><b>Register Number : </b><font color="black"><b>13TD2418</b></font> </font></td>
+</tr></tbody></table>
+
+<table align="center" border="0" cellspacing="1" cellpadding="2" bordercolor="LightCyan" bordercolordark="LightCyan">
+	<tbody><tr>
+		<td align="center"><font face="arial" size="3" color="blue"><b>Roll Number : </b><font color="black"><b></b></font> </font></td>
+</tr></tbody></table>
+
+<table align="center" border="0" cellspacing="1" cellpadding="1">
+  <tbody><tr>	
+		<td align="center"><font face="arial" size="3" color="blue"><b>Name of the student : <b><font size="3" color="black">JENITA MARY.K</font></b></b></font></td>
+  </tr>
+
+
+</tbody></table>
+<p></p>
+<table border="1" width="100%" cellspacing="2" cellpadding="2" bordercolor="black">
+	<tbody><tr colspan="8">
+			<td align="center" width="5%" bgcolor="RoyalBlue"><font face="arial" size="3" color="white"><b>Sl. No.</b></font></td>
+			<td align="center" width="60%" bgcolor="RoyalBlue"><font face="arial" size="3" color="white"><b>Subject Name</b></font></td>	
+			<td align="center" width="5%" bgcolor="RoyalBlue"><font face="arial" size="3" color="white"><b>Th / Pr</b></font></td>
+			<td align="center" width="5%" bgcolor="RoyalBlue"><font face="arial" size="3" color="white"><b>Univ. Exam</b></font></td>
+			<td align="center" width="5%" bgcolor="RoyalBlue"><font face="arial" size="3" color="white"><b>Viva</b></font></td>
+			<td align="center" width="5%" bgcolor="RoyalBlue"><font face="arial" size="3" color="white"><b>I.A.</b></font></td>
+			<td align="center" width="5%" bgcolor="RoyalBlue"><font face="arial" size="3" color="white"><b>Total / G.P.</b></font></td> 	
+			<td align="center" width="5%" bgcolor="RoyalBlue"><font face="arial" size="3" color="white"><b>Remarks / Grade</b></font></td> 	
+	</tr>
+	<tr>
+		
+			<td width="5%" align="center" bgcolor="white"><font face="arial" size="2" color="black">1</font></td>
+		
+		
+		<td width="66%" bgcolor="White"><font face="arial" size="2" color="black">ENGINEERING ECONOMICS AND MANAGEMENT </font></td>
+		
+					<td align="center" width="2%" bgcolor="white"><font face="arial" size="2" color="black">Th</font></td>
+				
+				<td align="center" width="7%" bgcolor="white"><font face="arial" size="2" color="black">&nbsp;&nbsp;-</font></td>
+				<td align="center" width="1%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="5%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="5%" bgcolor="white"><font face="arial" size="2" color="black">7</font></td> 
+				
+					<td align="center" width="6%" bgcolor="white" valign="middle"><font face="arial" size="2" color="DarkGreen"><b>C</b></font></td>
+				
+	</tr>
+	
+			<tr><td width="5%" align="center" bgcolor="white"><font face="arial" size="2" color="black">2</font></td>
+		
+		
+		<td width="66%" bgcolor="White"><font face="arial" size="2" color="black">INFORMATION SECURITY </font></td>
+		
+					<td align="center" width="2%" bgcolor="white"><font face="arial" size="2" color="black">Th</font></td>
+				
+				<td align="center" width="7%" bgcolor="white"><font face="arial" size="2" color="black">&nbsp;&nbsp;-</font></td>
+				<td align="center" width="1%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="5%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="5%" bgcolor="white"><font face="arial" size="2" color="black">6</font></td> 
+				
+					<td align="center" width="6%" bgcolor="white" valign="middle"><font face="arial" size="2" color="DarkGreen"><b>D</b></font></td>
+				
+	</tr>
+	
+			<tr><td width="5%" align="center" bgcolor="white"><font face="arial" size="2" color="black">3</font></td>
+		
+		
+		<td width="66%" bgcolor="White"><font face="arial" size="2" color="black">SEMINAR </font></td>
+		
+					<td align="center" width="2%" bgcolor="white"><font face="arial" size="2" color="black">Pr</font></td>
+				
+				<td align="center" width="7%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="1%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="5%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="5%" bgcolor="white"><font face="arial" size="2" color="black">10</font></td> 
+				
+					<td align="center" width="6%" bgcolor="white" valign="middle"><font face="arial" size="2" color="DarkGreen"><b>S</b></font></td>
+				
+	</tr>
+	
+			<tr><td width="5%" align="center" bgcolor="white"><font face="arial" size="2" color="black">4</font></td>
+		
+		
+		<td width="66%" bgcolor="White"><font face="arial" size="2" color="black">COMPREHENSIVE VIVA-VOCE </font></td>
+		
+					<td align="center" width="2%" bgcolor="white"><font face="arial" size="2" color="black">Pr</font></td>
+				
+				<td align="center" width="7%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="1%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="5%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="5%" bgcolor="white"><font face="arial" size="2" color="black">10</font></td> 
+				
+					<td align="center" width="6%" bgcolor="white" valign="middle"><font face="arial" size="2" color="DarkGreen"><b>S</b></font></td>
+				
+	</tr>
+	
+			<tr><td width="5%" align="center" bgcolor="white"><font face="arial" size="2" color="black">5</font></td>
+		
+		
+		<td width="66%" bgcolor="White"><font face="arial" size="2" color="black">PROFESSIONAL ETHICS </font></td>
+		
+					<td align="center" width="2%" bgcolor="white"><font face="arial" size="2" color="black">Pr</font></td>
+				
+				<td align="center" width="7%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="1%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="5%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="5%" bgcolor="white"><font face="arial" size="2" color="black">10</font></td> 
+				
+					<td align="center" width="6%" bgcolor="white" valign="middle"><font face="arial" size="2" color="DarkGreen"><b>S</b></font></td>
+				
+	</tr>
+	
+			<tr><td width="5%" align="center" bgcolor="white"><font face="arial" size="2" color="black">6</font></td>
+		
+		
+		<td width="66%" bgcolor="White"><font face="arial" size="2" color="black">PROJECTS WORK - PHASE II </font></td>
+		
+					<td align="center" width="2%" bgcolor="white"><font face="arial" size="2" color="black">Pr</font></td>
+				
+				<td align="center" width="7%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="1%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="5%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="5%" bgcolor="white"><font face="arial" size="2" color="black">10</font></td> 
+				
+					<td align="center" width="6%" bgcolor="white" valign="middle"><font face="arial" size="2" color="DarkGreen"><b>S</b></font></td>
+				
+	</tr>
+	
+			<tr><td width="5%" align="center" bgcolor="white"><font face="arial" size="2" color="black">7</font></td>
+		
+		
+		<td width="66%" bgcolor="White"><font face="arial" size="2" color="black">ELECTIVE : MOBILE COMPUTING </font></td>
+		
+					<td align="center" width="2%" bgcolor="white"><font face="arial" size="2" color="black">Th</font></td>
+				
+				<td align="center" width="7%" bgcolor="white"><font face="arial" size="2" color="black">&nbsp;&nbsp;-</font></td>
+				<td align="center" width="1%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="5%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="5%" bgcolor="white"><font face="arial" size="2" color="black">6</font></td> 
+				
+					<td align="center" width="6%" bgcolor="white" valign="middle"><font face="arial" size="2" color="DarkGreen"><b>D</b></font></td>
+				
+	</tr>
+	
+			<tr><td width="5%" align="center" bgcolor="white"><font face="arial" size="2" color="black">8</font></td>
+		
+		
+		<td width="66%" bgcolor="White"><font face="arial" size="2" color="black">ELECTIVE : GRID COMPUTING </font></td>
+		
+					<td align="center" width="2%" bgcolor="white"><font face="arial" size="2" color="black">Th</font></td>
+				
+				<td align="center" width="7%" bgcolor="white"><font face="arial" size="2" color="black">&nbsp;&nbsp;-</font></td>
+				<td align="center" width="1%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="5%" bgcolor="white"><font face="arial" size="2" color="black">-</font></td>
+				<td align="center" width="5%" bgcolor="white"><font face="arial" size="2" color="black">7</font></td> 
+				
+					<td align="center" width="6%" bgcolor="white" valign="middle"><font face="arial" size="2" color="DarkGreen"><b>C</b></font></td>
+				
+	</tr>
+	
+</tbody></table>
+<p></p>
+
+
+<!--
+<TABLE WIDTH=100% ALIGN=center BORDER=0 CELLSPACING=1 CELLPADDING=2 bordercolor=LightCyan bordercolordark=LightCyan>
+	<TR>
+		<TD align=center width="18%" bgcolor=#99ffff><font face=arial color=black>Max. Marks : <b></b>&nbsp;&nbsp;&nbsp;
+			Sec. Marks : <b> </b>&nbsp;&nbsp;&nbsp;
+			<input type=hidden name=MaxMarks id=MaxMarks value=0000>
+			<input type=hidden name=SecMarks id=SecMarks value=0000>
+			 
+				Percentage / S.G.P.A : <b>7.93 </b>&nbsp;&nbsp;&nbsp;
+				
+			Result : 
+				 
+					<font  color=DarkGreen><b>First Class</b></font> 
+					<input type=hidden name=Result id=Result value=First Class>
+					
+		</TD>
+	</TR>
+</TABLE>-->
+<table width="100%" align="center" border="0" cellspacing="1" cellpadding="2" bordercolor="LightCyan" bordercolordark="LightCyan">
+	<tbody><tr>
+		<td align="center" width="18%" bgcolor="#99ffff"><font face="arial">College : <b>1044 &nbsp;
+			<input type="hidden" name="CollCode" id="CollCode" value="1044">
+			Achariya College of Engineering Technology, Puducherry</b>
+			<input type="hidden" name="CollName" id="CollName" value="Achariya" college="" of="" engineering="" technology="">
+			<input type="hidden" name="Town" id="Town" value="Puducherry">
+		</font></td>
+	</tr>
+</tbody></table>
+<table width="100%" align="center" border="0" cellspacing="1" cellpadding="2" bordercolor="LightCyan" bordercolordark="LightCyan">
+	<tbody><tr>
+		<td align="center" width="18%" bgcolor="#99ffff"><font face="arial"><b>
+ 
+</b>
+			<input type="hidden" name="Mintopass" id="Mintopass" value="">
+		</font></td>
+	</tr>
+</tbody></table>
+	
+		<table width="100%" align="center" border="0" cellspacing="1" cellpadding="2" bordercolor="LightCyan" bordercolordark="LightCyan">
+			<tbody><tr>
+				<td align="center" width="18%" bgcolor="#99ffff"><font face="arial">[Marks Card Number : X]
+				<input type="hidden" name="MarksCardNumber" id="MarksCardNumber" value="X">
+				</font></td>
+			</tr>
+		</tbody></table>
+	
+<!--
+<TABLE WIDTH=100% ALIGN=center BORDER=0 CELLSPACING=1 CELLPADDING=2 bordercolor=LightCyan bordercolordark=LightCyan>
+	<TR>
+		<TD><P><b><font face=arial size=2 color=White><A href="" color=white onmouseover="SubjectDetails()">Click here to view subject wise details</A></font>
+		</TD>
+	</TR>
+</TABLE> -->
+
+<!--
+<TABLE WIDTH=100% ALIGN=center BORDER=0 CELLSPACING=1 CELLPADDING=2 bordercolor=LightCyan bordercolordark=LightCyan>
+	<TR>
+		<TD><P><b><font face=arial onclick="SubjectDetails()" size=2 color=Khaki><u><b><span id="jiggle0" class="jc"> Click here to view Subjectwise details</span></b></u></font>
+		</TD>
+	</TR>
+</TABLE> -->
+
+<table width="100%" align="center" border="0" cellspacing="1" cellpadding="2" bordercolor="LightCyan" bordercolordark="LightCyan">
+	<tbody><tr>
+		<td><p><b><font face="arial" onclick="SubjectDetails()" size="2" color="Black"><u><b><span id="jiggle0" class="jc" style="left: 1px;"> Click here to view Subjectwise details</span></b></u></font>
+		</b></p></td>
+	</tr>
+</tbody></table>
+
+<hr>
+<table width="100%" align="center" border="0" cellspacing="1" cellpadding="2" bordercolor="LightCyan" bordercolordark="LightCyan">
+	<tbody><tr>
+		<td><p><b><font face="arial" size="2" color="Blue">Note :</font> <font face="arial" size="2" color="Black">G.P. - Grade Point (Credit based courses Only). Grade - Grade earned from grade points (Credit based courses only). S.G.P.A - Semester Grade Point Average (Credit based courses only)
+				<br><br>Pondicherry University is not responsible for any inadvertent 
+				error that may have crept in the results being published on NET. The results 
+				published on net are for immediate information to the examinees. These cannot be 
+				treated as original mark sheets.
+				<br><br>As the examination wing of the university is getting fully automized, any discrepancy in the results may immediately be brought to the notice of the controller of examinations through the principal of the respective colleges. 
+<br><br>Marks Statement will carry papers registered in the current session only.<br></font></b><font face="arial" size="2" color="Black">
+<br></font>
+		</p></td>
+	</tr>
+</tbody></table>
+
+			
+
+<input type="hidden" name="sqlquery" id="sqlquery" value="SELECT" [student].[fregno],="" [student].[fdegree],="" [student].[fname],="" [student].[fscheme],="" [student].[fyear],="" [student].[fexamtype],="" [marks].[fsubcode],="" [marks].[fthue],="" [marks].[fthvv],="" [marks].[fthia],="" [marks].[fthtot],="" [marks].[fprue],="" [marks].[fprvv],="" [marks].[fpria],="" [marks].[fprtot],="" [marks].[fthpassmth],="" [marks].[fprpassmth],="" [marks].[fmaxmarks],="" [marks].[ftotmarks],="" [marks].[fpercent],="" [marks].[fclass],="" [marks].[fmcnumber],="" [marks].[fexamtype],="" [marks].[fprevmax],="" [marks].[fprevtot],="" [degree].[fscheme],="" [degree].[fdescpn],="" [degree].[fexamname],[student].[fexamno],="" [degree].[fexamdate],="" [degree].[fexamtype],="" [degree].[feligrem01],="" [degree].[feligrem02],="" [subject].[fscheme],="" [subject].[fmarkdesc1],="" [subject].[fmarkdesc2],="" [subject].[fexamtype],="" [college].[fscheme],="" [college].[fcollcode],="" [college].[fcollname],="" [college].[ftown],="" [college].[fexamtype],="" [student].[fenroll]="" from="" (marks="" inner="" join="" ((student="" college="" on="" [student].[fcollcode]="[COLLEGE].[FCOLLCODE])" degree="" ([student].[fscheme]="[DEGREE].[FSCHEME])" and="" ([student].[fdegree]="[DEGREE].[FDEGREE]))" ([marks].[fscheme]="[STUDENT].[FSCHEME])" ([marks].[fdegree]="[STUDENT].[FDEGREE])" ([marks].[fregno]="[STUDENT].[FREGNO]))" subject="" ([marks].[fsubcode]="[SUBJECT].[FSUBCODE])" ([marks].[fexamno]="[SUBJECT].[FEXAMNO])" ((([student].[fregno])="13td2418" or="" ([student].[fenroll])="13td2418" )="" (([student].[fdegree])="BTHCS" (([subject].[fscheme])="[MARKS].[FSCHEME])" (([subject].[fsubcode])="[MARKS].[FSUBCODE])" (([college].[fscheme])="[STUDENT].[FSCHEME])" (([college].[fcollcode])="[STUDENT].[FCOLLCODE])" (([college].[fdegree])="[STUDENT].[FDEGREE])" (([college].[fexamno])="[STUDENT].[FEXAMNO])And" (([marks].[fdegree])="[STUDENT].[FDEGREE])" (([marks].[fexamno])="[STUDENT].[FEXAMNO])" (([marks].[fregno])="[STUDENT].[FREGNO])" (([marks].[fscheme])="[STUDENT].[FSCHEME])" (([degree].[fdegree])="[MARKS].[FDEGREE])" (([degree].[fexamno])="H" (([subject].[fdegree])="[MARKS].[FDEGREE])" (([subject].[fexamno])="H" order="" by="" subject.fsubcode="">
+<input type="hidden" name="Subdpath" id="Subdpath" value="\BTHCS\result.mdb">
+<input type="hidden" name="degname" id="degname" value="BTHCS">
+<input type="hidden" name="strRegno" id="strRegno" value="13td2418">
+<input type="hidden" name="strexamno" id="strexamno" value="H">
+
+
+
+</font></font></strong></form></body></html>

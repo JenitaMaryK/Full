@@ -1,0 +1,48 @@
+package Watches;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Add {
+	HashMap<Integer, New> hm = new HashMap<Integer, New>();
+
+	void add() {
+		System.out.println("Number of items u want to add:");
+		Scanner scn = new Scanner(System.in);
+		int no = scn.nextInt();
+		System.out.println("Enter the item u want to add");
+		for (int i = 0; i < no; i++) {
+			
+			System.out.println("Brand:");
+			Scanner sc = new Scanner(System.in);
+			String Brand = sc.nextLine();
+			System.out.println("Price:");
+			Scanner sc1 = new Scanner(System.in);
+			int Price = sc1.nextInt();
+			System.out.println("Quantity:");
+			Scanner sc2 = new Scanner(System.in);
+			int Quantity = sc2.nextInt();
+			New n = new New(Brand, Price, Quantity);
+			int j=i;
+			while(j<10){
+			if(hm.containsKey(i))
+			{
+				i++;
+			}j++;
+			}
+			hm.put(i, n);
+			int siz=hm.size();
+			System.out.println(siz);
+		}
+	}
+
+	void display() {
+		System.out.println("ID \t\tBrand \t\tPrice \t\tQuantity");
+		for (HashMap.Entry<Integer, New> entry : hm.entrySet()) {
+			int key = entry.getKey();
+			New b = entry.getValue();
+			System.out.println(key + "\t\t" + b.brand + "\t\t" + b.price + "\t\t" + b.quantity);
+		}
+
+	}
+}

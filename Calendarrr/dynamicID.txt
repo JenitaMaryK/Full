@@ -1,0 +1,21 @@
+<div ng-attr-id="{{ 'object-' + myScopeObject.index }}"></div>
+<div id="object-1"></div>
+
+---------------------------------------------------------------------------------------
+
+var unqiueID = "myID123", ret = "";
+ret = "<select class='form-control' id='" + unqiueID +"' style='width:200px;'>";
+
+---------------------------------------------------------------------------------------
+
+JQuery
+-------
+$('#pages li').attr('id', function(i) {
+   return 'page'+(i+1);
+});
+In earlier versions, you'd need to write:
+
+$('#pages li').each(function(i) {
+    $(this).attr('id', 'page'+(i+1));
+});
+

@@ -1,0 +1,111 @@
+<html>
+<head>
+<style>
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 20;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.leftpane {
+    width: 22%;
+    height: 60%;
+    float: left;
+    background-color: rosybrown;
+    border-collapse: collapse;
+margin-left: 132px;
+margin-bottom: 50px;
+margin-right: 70px;
+}
+
+.middlepane {
+     width: 22%;
+    height: 60%;
+    float: left;
+    background-color: royalblue;
+    border-collapse: collapse;
+margin-bottom: 50px;
+margin-right: 70px;
+}
+
+.rightpane {
+   width: 22%;
+    height: 60%;
+  position: relative;
+  float: left;
+  background-color: yellow;
+  border-collapse: collapse;
+}
+.toppane1 {
+  width: 22%;
+  height: 30px;
+margin-right: 50px;
+ font-family:"Georgia";
+ font-size:"20px";
+float:top;
+  border-collapse: collapse;
+  background-color: #4da6ff;
+ 
+    
+}
+
+.toppane {
+  width: 22%;
+  height: 60px;
+float:top;
+margin-bottom: 50px;
+margin-right: 50px;
+  border-collapse: collapse;
+  background-color: grey;
+ 
+    
+}
+
+.topall {
+  width: 100%;
+  height: 30px;
+ font-family:"Georgia";
+float:top;
+  border-collapse: collapse;
+  background-color: #4da6ff;
+ 
+    
+}
+</style>
+</head>
+<body bgcolor=C0C0C0>
+<div class="container">
+<center>
+<div class="toppane1">
+	<h2> CALENDAR</h2>
+</div>
+</center>
+<center>
+ <div class="toppane">
+	<form action="/action_page.php">
+	<center>
+	<br/>
+  	<input type="date" name="bday">
+ 	 
+	</form>
+	</center>
+</div>
+
+  <div class="leftpane">
+	 <h1>TO-DO</h1>
+
+
+
+</div>
+  <div class="middlepane"><h1>DOING</h1></div>
+  <div class="rightpane">
+    <h1>DONE</h1></div>
+
+</div>
+</body>
+</html>

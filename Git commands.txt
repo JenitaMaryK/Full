@@ -1,0 +1,34 @@
+git init 			-> Initializing the repository
+git status			-> To c the current status
+git add filename.txt		-> to add files to the staging (update/track the file)
+git checkout filename.txt       -> undo operation  
+git rm				-> 
+git commit -m "Message"		-> To commit the git
+git log				-> To c commit status
+git add . 			-> Add all library to the file
+git remote			-> 
+origin @remote repository
+git push  <REMOTENAME> <BRANCHNAME> -> push your local changes to your online repository.
+git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME> ->This pushes the LOCALBRANCHNAME to your REMOTENAME, but it is 							      renamed to REMOTEBRANCHNAME.
+git push  <REMOTENAME> <TAGNAME> 	  ->To push a single tag, you can issue the same command as pushing a branch
+git push  <REMOTENAME> --tags		  ->To push all your tags
+git push  <REMOTENAME> :<BRANCHNAME>	  ->to delete a branch on remote repository
+git remote add upstream  <TheirRemoteURL> ->
+git commit 
+git branch			-> List of all branches
+git branch <branch-name>	-> Create new branch
+git branch -D <branch> 		->
+git checkout			-> shifting the branch from one to another
+git merge <branch>		-> Merge the branch with another branch
+git pull origin branch_name	->Pull the code and merge it with origin
+git fetch	-> Pull the code but dont merge it 
+
+
+
+
+
+
+
+
+	Basically git commit "records changes to the repository" while git push "updates remote refs along with associated objects". So the first one is used in connection with your local repository, while the latter one is used to interact with a remote repository.
+
